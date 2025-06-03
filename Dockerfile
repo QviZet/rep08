@@ -1,11 +1,10 @@
-FROM ubuntu:latest
-
-COPY . /app
-WORKDIR /app
+FROM ubuntu:latestAdd commentMore actions
 
 RUN apt update
-RUN apt install -yy g++ cmake
-RUN cmake -H. -Bbuild
-RUN cmake --build build
+RUN apt install -yy gcc g++ cmake
 
-CMD ["./build/hello_world_application/hello_world"]
+COPY . /building
+WORKDIR /building
+
+RUN cmake -H. -B_build
+RUN cmake --build _build
