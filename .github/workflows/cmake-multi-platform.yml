@@ -21,10 +21,10 @@ jobs:
       run: sudo docker build -t hello_world . 
 
     - name: Run
-      run: docker run --name hello_world_application hello_world
+      run: docker run --name hw_app hello_world
 
     - name: Copy
-      run: sudo docker cp hello_world_application:app/build/hello_world_application/hello_world .
+      run: sudo docker cp hw_app:app/build/hw_app/hello_world .
     
     - run: mkdir -p artifacts
     - name: download_artefacts
