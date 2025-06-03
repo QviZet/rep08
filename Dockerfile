@@ -1,4 +1,4 @@
-FROM ubuntu:latestAdd commentMore actions
+FROM ubuntu:latest
 
 RUN apt update
 RUN apt install -yy gcc g++ cmake
