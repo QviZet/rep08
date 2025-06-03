@@ -17,13 +17,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Build
-      run: sudo docker build -t hello_world . 
+      run: sudo docker build -t hw_app . 
 
     - name: Run
-      run: docker run --name hw_app hello_world
+      run: docker run --name HW_APP hw_app
 
     - name: Copy
-      run: sudo docker cp hw_app:building/hello_world_application/hw_app .
+      run: sudo docker cp HW_APP:app/building/hello_world_application/hw_app .
       
     - run: mkdir -p artifacts
     - name: download_artefacts
